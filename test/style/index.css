@@ -1,40 +1,6 @@
+@import "common.css";
 
-.border {
-    margin: 28px auto 43px;
-    height: 2px;
-    width: 80px;
-    background: rgba(0, 0, 0, 0.09);
+.main-section{
+    /*min-height: 100vh;*/
+    background:url("../images/main-bg.svg");
 }
-
-.graphic-card{
-    width: 320px;
-    margin: 0 10px;
-
-}
-.wrapper-card{
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.wrapper-graphic-img{
-
-    width: 300px;
-    height: 219px;
-
-    padding: 50px 86.5px;
-
-    background: #F5F5F5;
-}
-.wrapper-graphic-img img{
-    width: 127px;
-    height: 119px;
-}
-.container-true{
-    max-width: 940px;
-
-
-}
-

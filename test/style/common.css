@@ -1,0 +1,92 @@
+@import "font.css";
+:root{
+    --main-color:#323264;
+    --main-black:black;
+    --main-white:white;
+    --gradient-text:linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+
+    --blue-main:#24A3FF;
+    --blue-hover:#0085FF;
+    --blue-active:#006CCF;
+
+    --pink-accent:#F0145A;
+}
+html{
+    font-family: "TT Norms" , sans-serif;
+}
+h1{
+    font-size: 32px;
+    line-height: 38px;
+}
+h2{
+    font-size: 22px;
+    line-height: 26px;
+
+}
+h3{
+    font-size: 18px;
+    line-height: 21px;
+
+}
+h3.caps{
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+h4{
+    font-size: 18px;
+    line-height: 21px;
+}
+@media  (min-width: 568px){
+    h1{
+        font-size: 42px;
+        line-height: 50px;
+    }
+    h2{
+        font-size: 32px;
+        line-height: 38px;
+    }
+    h3{
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
+p{
+    color:var(--main-black);
+}
+a{
+    font-size: 16px;
+    line-height: 20px;
+    color:var(--blue-main);
+    transition: 0.25s;
+}
+button{
+    background:var(--blue-main);
+    box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 17px;
+    padding:16px 16px 17px;
+    max-width: 250px;
+    width: 100%;
+    text-align: center;
+    color:var(--main-white);
+    transition: all 0.3s ease-in;
+}
+button:hover{
+    background: var(--blue-hover);
+    box-shadow: 0px 0px 30px rgba(36, 163, 255, 0.5);
+}
+button:active{
+    background: var(--blue-active);
+    box-shadow: none;
+}
+.gradientText{
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
