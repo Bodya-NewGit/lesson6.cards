@@ -1,0 +1,65 @@
+
+* {
+    box-sizing: border-box;
+}
+
+
+.animate-block {
+
+    background: red;
+    width: 300px;
+    height: 300px;
+    margin: 100px auto;
+    /*длительность анимации*/
+    /*animation-duration: 2s, 0.5s;*/
+    animation: rotate 3s 1s forwards infinite ,
+    bouncing 3s 1s both infinite ;
+    /*!*анимация остается в конечной точке*!*/
+    /*animation-fill-mode: both;*/
+    /*!*задержка перед началом анимации*!*/
+    /*animation-delay: 1s;*/
+    /*!*анимация проиграется 3 раза*!*/
+    /*animation-iteration-count: 3;*/
+}
+
+/*@keyframes maxWidth {*/
+/*    0% {*/
+/*        width: 300px;*/
+/*    }*/
+/*    50%{*/
+/*        width: 500px;*/
+/*    }*/
+/*    100% {*/
+/*        width: 300px;*/
+/*    }*/
+/*}*/
+@keyframes rotate{
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+
+        transform: rotate(360deg);
+    }
+}
+@keyframes bouncing {
+    0% {
+        margin-top: 0;
+    }
+    50%{
+        margin-top: 150px;
+    }
+    100% {
+        margin-top: 0;
+    }
+}
+/*@keyframes fadeIn {*/
+/*    0% {*/
+/*        opacity: 0;*/
+/*    }*/
+/*    100% {*/
+/*        opacity: 1;*/
+/*    }*/
+/*}*/
+
