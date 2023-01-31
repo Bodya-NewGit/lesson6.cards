@@ -1,0 +1,241 @@
+/*контейнер для хедера*/
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+    text-align: center;
+}
+.d-flex {
+    display: flex;
+}
+/*разводим контент в противоположные стороны*/
+header .d-flex {
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+header {
+    /*padding: 18px 0;*/
+    background: white;
+}
+
+.logo-img {
+    width: 155px;
+    height: 70px;
+}
+
+.logo-img:hover {
+    box-shadow: 2px 2px 10px #65687e;
+    transition: 0.4s;
+}
+.nav-links{
+    background-color: #f46b45;
+}
+.nav-links > a {
+    padding: 4px 17px;
+    text-transform: uppercase;
+    text-decoration: none;
+    overflow: hidden;
+
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+
+}
+
+.nav-links a:hover {
+    box-shadow: 2px 2px 3px #36031d;
+    text-replace: 0.5s;
+}
+
+
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#menu-toggle {
+    display: none;
+}
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    display: block;
+    background-color: #f68322;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+.menu-button::before {
+    content: '';
+    margin-top: -8px;
+}
+.menu-button::after {
+    content: '';
+    margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0;
+    transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0;
+    transform: rotate(-405deg);
+}
+
+@media (max-width: 1024px) {
+    .menu-button-container {
+        display: flex;
+    }
+    .nav-links  {
+        position: absolute;
+        top: 0;
+        margin-top: 90px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    #menu-toggle ~ .nav-links a {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    #menu-toggle:checked ~ .nav-links a {
+        border: 1px solid #333;
+        height: 40px;
+        padding: 10px;
+        transition: height 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+
+    }
+    .nav-links > a {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        /*padding: 0.5em 0;*/
+        width: 100%;
+        color: rgba(37, 37, 37, 0.71);
+
+    }
+    .nav-links > a:not(:last-child) {
+        border-bottom: 1px solid #444;
+    }
+}
+
+/*первичный неверный адаптив*/
+
+@media (min-width: 1024px) {
+    .d-flex {
+        flex-direction: column;
+    }
+
+    .section-1 h1 {
+        font-size: 28px;
+        line-height: 32px;
+        padding-top: 40px;
+    }
+
+    .section-3 .container {
+        max-width: 400px;
+    }
+
+    .wrapper-card {
+        display: block;
+
+    }
+
+    .graphicWrapper {
+        height: 219px;
+        width: 300px;
+        margin: 0 auto;
+        background: #F5F5F5;
+
+    }
+
+    .caption-for-graphics {
+        margin-top: 15px;
+        font-size: 18px;
+    }
+
+    .graphic-p {
+        font-size: 14px;
+        line-height: 22px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+
+    }
+
+    /*    секция 4*/
+    .wrapper-photo-card {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .photo-cards {
+
+        margin: 0 10px 20px;
+        background: #FFFFFF;
+        font-size: 0;
+    }
+
+    /*    секция 5*/
+    .team .container {
+        max-width: 480px;
+    }
+
+    .wrapper-team {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
+    /*    секция 6*/
+    .section-6 .container{
+        max-width: 446.5px;
+    }
+    .wrapper-section-6 {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .border-2 {
+        margin: 65px auto 0;
+        height: 2px;
+        background: rgba(0, 0, 0, 0.04);
+        width: 215px;
+    }
+    /*    секция 7*/
+    .section-7 .container{
+        max-width: 320px;
+    }
+    .wrapper-section-7{
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .bg-img-2 {
+        position: absolute;
+        display: block;
+        z-index: -1;
+        width: 100%;
+        height: 200%;
+    }
+    .section-7-card{
+        padding-bottom: 20px;
+    }
+}
